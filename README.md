@@ -1,0 +1,1 @@
+This projext is based on automated pipeline
