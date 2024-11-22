@@ -1,0 +1,36 @@
+Here is HOW can you do in 5 steps 
+
+𝗦𝘁𝗲𝗽 𝟭: 𝗦𝗤𝗟
+ - Basic SQL Syntax
+ - DDL, DML, DCL
+ - Joins & Subqueires
+ - Views & Indexes
+ - CTEs & Window Functions
+
+𝗦𝘁𝗲𝗽 𝟮: 𝗣𝘆𝘁𝗵𝗼𝗻
+ - Fundamentals
+ - Numpy
+ - Pandas
+
+𝗦𝘁𝗲𝗽 𝟯: 𝗣𝘆𝘀𝗽𝗮𝗿𝗸
+ - RDD
+ - Dataframe
+ - Datasets
+ - Spark Streaming
+ - Optimization techniques
+
+𝗦𝘁𝗲𝗽 𝟰: 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘀𝘂𝗶𝗻𝗴/𝗗𝗮𝘁𝗮 𝗠𝗼𝗱𝗲𝗹𝗶𝗻𝗴
+ - OLAP vs OLTP
+ - Star & Snowflake Schema
+ - Fact & Dimension Tables
+ - Slowly Changing Dimensions (SCD)
+
+𝗦𝘁𝗲𝗽 𝟱: 𝗖𝗹𝗼𝘂𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀
+ - Nosql DB 
+ - Relational DB 
+ - Datawarehousing 
+ - Scheduling & Orchestration
+ - Messaging
+ - ETL Services
+ - Storage Services
+ - Data Processing Services

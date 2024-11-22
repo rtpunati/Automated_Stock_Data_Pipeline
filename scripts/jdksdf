@@ -14,8 +14,9 @@ data['Date'] = pd.to_datetime(data['Date'])
 data.set_index('Date', inplace=True)
 data = data.asfreq('D')
 
+
 # Split the data into training and test sets (e.g., last 30 days for testing)
-train, test = train_test_split(data, test_size=0.1, shuffle=False)
+train, test = train_test_split(data, test_size=0.2, random_state=42)
 
 # Fit an ARIMA model (you might need to tune the p, d, q parameters)
 model = ARIMA(train['Close'], order=(5, 1, 0))

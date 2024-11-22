@@ -66,27 +66,3 @@ if __name__ == "__main__":
             load_data_to_csv(transformed_data)
 
 
-
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load the data into a pandas DataFrame
-data = pd.read_csv('C://Users//ratan//automated_data_pipeline//output//stock_data.csv')
-
-# Convert the Date column to datetime format
-data['Date'] = pd.to_datetime(data['Date'])
-
-# Set the Date column as the index
-data.set_index('Date', inplace=True)
-
-# Plot the Close prices over time
-plt.figure(figsize=(10, 6))
-plt.plot(data['Close'], label='Close Price')
-plt.title('Close Price Time Series')
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.legend()
-plt.grid(True)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
