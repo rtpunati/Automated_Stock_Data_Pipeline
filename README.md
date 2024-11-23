@@ -1,4 +1,4 @@
-```markdown
+
 # Automated Data Pipeline for Stock Market Forecasting
 
 ## Overview
@@ -6,7 +6,7 @@ This project implements an automated data pipeline that fetches stock market dat
 
 ## Project Structure
 
-
+```markdown
 automated_data_pipeline/
 │
 ├── scripts/
