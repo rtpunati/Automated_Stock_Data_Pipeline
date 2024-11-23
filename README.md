@@ -6,7 +6,7 @@ This project implements an automated data pipeline that fetches stock market dat
 
 ## Project Structure
 
-```
+
 automated_data_pipeline/
 │
 ├── scripts/
@@ -18,6 +18,8 @@ automated_data_pipeline/
 │   └── stock_data.csv             # CSV containing the processed stock data
 │
 └── README.md                      # This file
+
+```
 ```
 
 ## Features
