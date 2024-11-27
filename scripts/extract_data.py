@@ -5,7 +5,7 @@ import json
 
 # Function to fetch data from Alpha Vantage API
 def fetch_data():
-    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=YOUR_API_KEY'
+    url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSI&apikey=YOUR_API_KEY'
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -46,7 +46,7 @@ def transform_data(raw_data):
         return None
 
 # Function to save the DataFrame as a CSV file in the 'output' folder
-def load_data_to_csv(df, filename="stock_data.csv"):
+def load_data_to_csv(df, filename="MSI_stock_data.csv"):
     if df is None:
         print("No data to save.")
         return

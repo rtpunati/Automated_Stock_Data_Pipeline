@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from statsmodels.tsa.arima.model import ARIMA
 
 # Load and preprocess the data
-data = pd.read_csv('C://Users//ratan//automated_data_pipeline//output//stock_data.csv')
+data = pd.read_csv('C://Users//ratan//automated_data_pipeline//output//MSI_stock_data.csv')
 data.rename(columns={'Unnamed: 0': 'Date'}, inplace=True)
 data['Date'] = pd.to_datetime(data['Date'])
 data.set_index('Date', inplace=True)
