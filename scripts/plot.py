@@ -11,24 +11,38 @@ data.set_index('Date', inplace=True)
 # Forward-fill to handle missing values
 data = data.asfreq('D').fillna(method='ffill')
 
-# Ensure model sees the true value on 2024-11-21
-data.loc['2024-11-21', 'Close'] = 222.80
+# Use all available data for training
+train_data = data
 
-# Use the most recent 3 months of data
-train = data.loc['2024-08-01':]
-
-# Fit ARIMA model
-model = ARIMA(train['Close'], order=(5, 1, 0))  # Test orders (5, 1, 0), (1, 1, 1), etc.
+# Fit ARIMA model on the training data
+model = ARIMA(train_data['Close'], order=(5, 1, 0))  # Adjust order as needed
 model_fit = model.fit()
 
-# Forecast the next 5 days
-forecast_steps = 5
+# Forecast the next 5 days (27th onward)
+forecast_steps = 7
 forecast = model_fit.forecast(steps=forecast_steps)
 
-# Align forecast with observed dates
-forecast.index = pd.date_range(
-    start=data.index[-1] + pd.Timedelta(days=1),
-    periods=forecast_steps,
-    freq='D'
-)
+# Correct forecast index to start from the next day
+forecast.index = pd.date_range(start=data.index[-1] + pd.Timedelta(days=1),
+                               periods=forecast_steps,
+                               freq='D')
 
+# Plot the actual data and forecast
+plt.figure(figsize=(12, 6))
+plt.plot(data['Close'], label='Actual Data', color='blue')
+plt.plot(forecast.index, forecast, label='Forecast', color='orange', linestyle='--')
+plt.axvline(x=data.index[-1], color='gray', linestyle='--', label='Forecast Start')
+
+# Add labels and legend
+plt.title("Stock Price Forecast (Starting from 27th)")
+plt.xlabel("Date")
+plt.ylabel("Close Price")
+plt.legend()
+plt.grid()
+
+# Show plot
+plt.show()
+
+# Print forecasted values
+print("Forecasted Values:")
+print(forecast)
