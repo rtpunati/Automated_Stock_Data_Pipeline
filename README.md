@@ -10,7 +10,7 @@ This project implements an automated data pipeline that fetches stock market dat
 automated_data_pipeline/
 │
 ├── data/
-│   ├── stock_data.csv           # CSV containing the processed stock data
+│   └── stock_data.csv           # CSV containing the processed stock data
 │    
 ├── scripts/
 │   ├── extract_data.py            # Script to fetch and preprocess stock data
